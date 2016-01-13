@@ -12,7 +12,7 @@
 
 * [Introduction](#introduction-)
 * [Dependencies](#dependencies-)
-* [Build & Installation](#build-installation-)
+* [Build & Installation](#build--installation-)
 * [Configuration](#configuration-)
 
 
