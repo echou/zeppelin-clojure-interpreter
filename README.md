@@ -9,9 +9,13 @@
 
 ## Versions
 
-There are two versions supported:
+There are two versions supported, both in separate branches:
 
-* The original Clojure support for [Zeppelin 0.5.0](../../tree/Zeppelin-0.5.0) (with a
-  few slight modifications)
-* Updated project code for the latest binary release of [Zeppelin 0.5.5](../../tree/Zeppelin-0.5.5)
+* [Zeppelin 0.5.0](../../tree/Zeppelin-0.5.0)
+  * This is the original code (with a few slight modifications) for the Zeppelin Clojure interpreter by [Beau Fabry](https://github.com/bfabry)
+  * Changes include intructions in a README, a ``Makefile`` for easy installation, minor formatting tweaks, etc.
+* [Zeppelin 0.5.5](../../tree/Zeppelin-0.5.5)
+  * Uses the latest binary release of Zeppelin
+  * Uses the binary release's ``zeppelin-interpreter.jar``, since there is no official 0.5.5 jar on Maven or Clojars
+
 
