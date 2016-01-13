@@ -1,4 +1,4 @@
-# Clojure Interpreter for Zeppelin Notebooks
+# clj Zeppelin
 
 [![][clj-zep-logo]][clj-zep-logo-large]
 
