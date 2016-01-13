@@ -1,7 +1,11 @@
 (ns clojureinterpreter.core
-  (:require [clojure.tools.nrepl.server :as server]
-            [clojure.tools.nrepl :as client])
-  (:import [org.apache.zeppelin.interpreter Interpreter InterpreterResult InterpreterResult$Code InterpreterContext])
+  (:require [clojure.tools.nrepl.server :as repl-server]
+            [clojure.tools.nrepl :as repl-client])
+  (:import [org.apache.zeppelin.interpreter
+              Interpreter
+              InterpreterResult
+              InterpreterResult$Code
+              InterpreterContext])
   (:gen-class
    :methods [^:static [open [] Object]
              ^:static [close [Object] void]
@@ -9,14 +13,20 @@
 
 (def nrepl-server (atom nil))
 
+(defn make-server []
+  (let [new-server (repl-server/start-server)
+        port (:port new-server)
+        transport (repl-client/connect :port port)
+        timeout 1000]
+    (repl-client/client transport timeout)))
+
 (defn open []
   (swap! nrepl-server
          (fn [server?]
            (if server?
              server?
-             (let [new-server (server/start-server)]
-               (client/client (client/connect :port (:port new-server)) 1000)))))
-  (client/client-session @nrepl-server))
+             (make-server))))
+  (repl-client/client-session @nrepl-server))
 
 (defn -open [] (open))
 
@@ -32,7 +42,7 @@
    ^InterpreterContext context]
 
   (let [outputs (-> connection
-                    (client/message {:op "eval" :code cmd})
+                    (repl-client/message {:op "eval" :code cmd})
                     doall)
 
         result (->> outputs
