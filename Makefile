@@ -12,13 +12,15 @@ endif
 
 VERSION = $(subst ",,$(lastword $(shell head -1 project.clj)))
 INTERP_DIR = $(ZEPPELIN_HOME)/interpreter/clj
+LOCAL_JARS = ./resources
 JAR_FILE = target/clojureinterpreter-$(VERSION)-standalone.jar
+
+$(JAR_FILE):
+	cp $(ZEPPELIN_HOME)/lib/*.jar $(LOCAL_JARS)/
+	@lein uberjar
 
 clean:
 	rm $(JAR_FILE)
-
-$(JAR_FILE):
-	@lein uberjar
 
 install: $(JAR_FILE)
 	mkdir -p $(INTERP_DIR)
