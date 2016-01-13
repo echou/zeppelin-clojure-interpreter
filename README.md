@@ -12,7 +12,7 @@
 
 * [Introduction](#introduction-)
 * [Dependencies](#dependencies-)
-* [Build & Installation](#build--installation-)
+* [Installation](#build--installation-)
 * [Configuration](#configuration-)
 
 
@@ -26,11 +26,25 @@ TBD
 * Zeppelin
 * ``lein``
 
+Optional:
 
-## Build & Installation [&#x219F;](#contents)
+* GNU ``make``
 
-This project registers an interpreter named ``clj`` for Zeppelin. To use it,
-you first need to build its ``.jar`` file:
+
+## Installation [&#x219F;](#contents)
+
+### Auto Build & Install
+
+Simply execute the following make target:
+
+```bash
+$ make install
+```
+
+### Manual Build & Install
+
+When the automatic approach is not preferred, you may perform the steps
+manually:
 
 ```bash
 $ lein uberjar
@@ -52,7 +66,7 @@ configure Zeppelin to let it know it's available for use. In setting up
 Zeppelin, you should have created (or it was created for you) the configuration
 file ``$ZEPPELIN_HOME/conf/zeppelin-site.xml``.
 
-1. Open this file
+1. Open ``$ZEPPELIN_HOME/conf/zeppelin-site.xml``
 1. Search for the line ``<name>zeppelin.interpreters</name>``
 1. After the last interpreter given in the ``<value>`` tag, add a comma and
    then the value ``clojureinterpreter.ClojureInterpreter``; if you want
@@ -60,9 +74,5 @@ file ``$ZEPPELIN_HOME/conf/zeppelin-site.xml``.
    comma-separatede list of values
 1. Save and exit the file
 1. Restart Zeppelin, e.g.: ``/opt/zeppelin/0.5.5/bin/zeppelin-daemon.sh restart``
-1. Load up the notebook in your browser
-1. From the "Interpreters" menu at the top, select "Clojure"
-1. Click the ``+Create`` button and customize your interpreters settings
-1. If you did not configure the Clojure interpreter to be your default, then
-   you can use the ``%clj`` directive you declare the Clojure interpreter
+1. Load up the Zeppelin in your browser and enjoy Clojure :-)
 
