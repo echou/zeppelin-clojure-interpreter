@@ -11,6 +11,6 @@
 
 There are two versions supported:
 
-* The original [0.5.0](/tree/Zeppelin-0.5.0) version of Zeppelin
-* The latest binary release, [0.5.5](/tree/Zeppelin-0.5.5)
+* The original [0.5.0](tree/Zeppelin-0.5.0) version of Zeppelin
+* The latest binary release, [0.5.5](tree/Zeppelin-0.5.5)
 
