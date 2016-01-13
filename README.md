@@ -13,5 +13,5 @@ There are two versions supported:
 
 * The original Clojure support for [Zeppelin 0.5.0](../../tree/Zeppelin-0.5.0) (with a
   few slight modifications)
-* The latest binary release of [Zeppelin 0.5.5](../../tree/Zeppelin-0.5.5)
+* Updated project code for the latest binary release of [Zeppelin 0.5.5](../../tree/Zeppelin-0.5.5)
 
