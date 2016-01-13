@@ -1,4 +1,4 @@
-(defproject clojureinterpreter "0.2.0"
+(defproject clojureinterpreter "0.1.1"
   :description "A Clojure Interpreter for Zeppelin Notebooks"
   :url "https://github.com/bfabry/zeppelin-clojure-interpreter"
   :license {:name "Eclipse Public License"
