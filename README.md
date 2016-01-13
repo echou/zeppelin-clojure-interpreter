@@ -23,7 +23,7 @@ TBD
 
 ## Dependencies [&#x219F;](#contents)
 
-* Zeppelin
+* Zeppelin 0.5.0 (the interpreter ``.jar`` file version must match the version of Zeppelin you are using)
 * ``lein``
 
 Optional:
