@@ -1,30 +1,51 @@
 # Clojure Interpreter for Zeppelin Notebooks
 
+[![][clj-zep-logo]][clj-zep-logo-large]
 
-## Dependencies
+[clj-zep-logo]: resources/images/clojurezeppelin-logo-x250.png
+[clj-zep-logo-large]: resources/images/clojurezeppelin-logo-x1000.png
+
+*A Clojure Interpreter for Zeppelin Notebooks*
+
+
+#### Contents
+
+* [Introduction](#introduction-)
+* [Dependencies](#dependencies-)
+* [Build & Installation](#build-installation-)
+* [Configuration](#configuration-)
+
+
+## Introduction [&#x219F;](#contents)
+
+TBD
+
+
+## Dependencies [&#x219F;](#contents)
 
 * Zeppelin
 * ``lein``
 
 
-## Build & Installation
+## Build & Installation [&#x219F;](#contents)
 
 This project registers an interpreter named ``clj`` for Zeppelin. To use it,
 you first need to build its ``.jar`` file:
 
 ```bash
-$ lein jar
+$ lein uberjar
 ```
 
-This will create the file ``target/clojureinterpreter-0.2.0.jar``. Copy this to
-the ``interpreter`` directory in your ``ZEPPELIN_HOME``, e.g.:
+This will create the file ``target/clojureinterpreter-0.2.0-standalone.jar``.
+Copy this to the ``interpreter`` directory in your ``ZEPPELIN_HOME``, e.g.:
 
 ```bash
-$ cp target/clojureinterpreter-0.2.0.jar /opt/zeppelin/0.5.5/interpreter
+$ mkdir /opt/zeppelin/0.5.5/interpreter/clj/
+$ cp target/clojureinterpreter-0.2.0-standalone.jar /opt/zeppelin/0.5.5/interpreter
 ```
 
 
-## Configuration
+## Configuration [&#x219F;](#contents)
 
 Once the Clojure interpreter ``.jar`` file is in place, you'll need to
 configure Zeppelin to let it know it's available for use. In setting up
