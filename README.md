@@ -23,7 +23,7 @@ TBD
 
 ## Dependencies [&#x219F;](#contents)
 
-* Zeppelin 0.5.0 (the interpreter ``.jar`` file version must match the version of Zeppelin you are using)
+* Zeppelin 0.5.5
 * ``lein``
 
 Optional:
@@ -33,31 +33,11 @@ Optional:
 
 ## Installation [&#x219F;](#contents)
 
-### Auto Build & Install
-
 Simply execute the following make target:
 
 ```bash
 $ make install
 ```
-
-### Manual Build & Install
-
-When the automatic approach is not preferred, you may perform the steps
-manually:
-
-```bash
-$ lein uberjar
-```
-
-This will create the file ``target/clojureinterpreter-0.2.0-standalone.jar``.
-Copy this to the ``interpreter`` directory in your ``ZEPPELIN_HOME``, e.g.:
-
-```bash
-$ mkdir /opt/zeppelin/0.5.5/interpreter/clj/
-$ cp target/clojureinterpreter-0.2.0-standalone.jar /opt/zeppelin/0.5.5/interpreter
-```
-
 
 ## Configuration [&#x219F;](#contents)
 
