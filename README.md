@@ -73,6 +73,6 @@ file ``$ZEPPELIN_HOME/conf/zeppelin-site.xml``.
    Clojure to be your default interpreter, move it to the first value in the
    comma-separatede list of values
 1. Save and exit the file
-1. Restart Zeppelin, e.g.: ``/opt/zeppelin/0.5.5/bin/zeppelin-daemon.sh restart``
+1. Restart Zeppelin, e.g.: ``/opt/zeppelin/0.5.0/bin/zeppelin-daemon.sh restart``
 1. Load up the Zeppelin in your browser and enjoy Clojure :-)
 
