@@ -17,5 +17,6 @@ There are two versions supported, both in separate branches:
 * [Zeppelin 0.5.5](../../tree/Zeppelin-0.5.5)
   * Uses the latest binary release of Zeppelin
   * Uses the binary release's ``zeppelin-interpreter.jar``, since there is no official 0.5.5 jar on Maven or Clojars
+  * Includes two popular Clojure libraries for Spark: [flambo](https://github.com/yieldbot/flambo) and [sparkling](https://github.com/gorillalabs/sparkling)
 
 
