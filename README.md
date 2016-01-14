@@ -9,7 +9,7 @@
 
 ## Versions
 
-There are two versions supported, both in separate branches:
+There are several supported versions, all in separate branches:
 
 ### 0.5.0
 
